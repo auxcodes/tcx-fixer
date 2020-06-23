@@ -11,16 +11,19 @@ namespace StravaTcxFileFixer
             try
             {
                 string rootPath = Directory.GetCurrentDirectory();
-                string destinationPath = rootPath + "Fixed_TCX_Files";
+                string destinationPath = rootPath + @"\Fixed_TCX_Files";
                 Directory.CreateDirectory(destinationPath);
                 string[] tcxFiles = Directory.GetFiles(rootPath, "*.tcx");
-
-                Console.WriteLine("Found {0} tcx files in {1}", tcxFiles.Length, rootPath);
+                Console.WriteLine("|");
+                Console.WriteLine("| Found {0} tcx files in {1}", tcxFiles.Length, rootPath);
+                Console.WriteLine("|");
                 foreach (string tcxFile in tcxFiles)
-                {
-                    Console.WriteLine(tcxFile);
+                {                   
                     ProcessFile(rootPath, tcxFile, destinationPath);
                 }
+                Console.WriteLine("|");
+                Console.WriteLine("| All files fixed :D");
+                Console.WriteLine("|");
             }
             catch (Exception e)
             {
@@ -30,9 +33,9 @@ namespace StravaTcxFileFixer
 
         static void ProcessFile(string rootPath, string sourceFile, string destinationPath)
         {
+            Console.WriteLine("> Processing: " + Path.GetFileName(sourceFile));
             int line_to_edit = 1;
-            int fileExtPos = sourceFile.LastIndexOf(".");
-            string destinationFile = sourceFile.Substring(0, fileExtPos) + "_fixed.tcx";
+            string destinationFile = destinationPath + @"\" + Path.GetFileName(sourceFile);
 
             // Read the appropriate line from the file.
             string lineToWrite = null;
@@ -69,9 +72,8 @@ namespace StravaTcxFileFixer
                     line_number++;
                 }
             }
-            Console.WriteLine("------------------------------------------------------------");
-            Console.WriteLine("|  File updated: " + destinationFile);
-            Console.WriteLine("------------------------------------------------------------");
+            Console.WriteLine("> File updated: " + destinationFile);
+            Console.WriteLine(">");
         }
 
 
