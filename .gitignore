@@ -11,6 +11,24 @@
 /[Mm]emoryCaptures/
 /[Bb]in/
 
+ConsoleTestProject/[Ll]ibrary/
+ConsoleTestProject/[Tt]emp/
+ConsoleTestProject/[Oo]bj/
+ConsoleTestProject/[Bb]uild/
+ConsoleTestProject/[Bb]uilds/
+ConsoleTestProject/[Ll]ogs/
+ConsoleTestProject/[Mm]emoryCaptures/
+ConsoleTestProject/[Bb]in/
+
+TcxFixerGui/[Ll]ibrary/
+TcxFixerGui/[Tt]emp/
+TcxFixerGui/[Oo]bj/
+TcxFixerGui/[Bb]uild/
+TcxFixerGui/[Bb]uilds/
+TcxFixerGui/[Ll]ogs/
+TcxFixerGui/[Mm]emoryCaptures/
+TcxFixerGui/[Bb]in/
+
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
