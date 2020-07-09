@@ -72,6 +72,33 @@ namespace TcxFixerGui
             }
         }
 
+        private Timer typingTimer;
+        private int textChangedTimeout = 10 * 1000; // 10 sec
+        private event EventHandler DelayedTextChanged;
+
+        private void TextChangedTimer()
+        {
+            if (typingTimer != null)
+                typingTimer.Stop();
+
+            if (typingTimer == null || typingTimer.Interval != textChangedTimeout)
+            {
+                typingTimer = new Timer();
+                typingTimer.Tick += new EventHandler(HandleDelayedTextChangedTimerTick);
+                typingTimer.Interval = textChangedTimeout;
+            }
+
+            typingTimer.Start();
+        }
+
+        private void HandleDelayedTextChangedTimerTick(object sender, EventArgs e)
+        {
+            Timer timer = sender as Timer;
+            timer.Stop();
+
+            DelayedTextChanged?.Invoke(this, EventArgs.Empty);
+        }
+
         private void GetFiles(string path)
         {
             if (!File.Exists(path))
