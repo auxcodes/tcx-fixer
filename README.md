@@ -2,7 +2,7 @@
 
 C# projects for fixing TCX files exported from Strava.
 
-##Problem They Solve
+## Problem They Solve
 
 Bulk downloaded tcx files from Strava have leading spaces at the begining of the file, which Garmin Connect deams as invalid XML with the following error message.
 
