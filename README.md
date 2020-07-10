@@ -27,7 +27,7 @@ Now I had thousands of files that need fixing, there was no way I was going to d
 
 This project provides a basic gui interface for selecting .tcx files and displaying the output whilst processing the files.
 
-![alt text](https://github.com/auxcodes/tcx-fixer/blob/master/ReadmeImages/TcxFixerGUI.PNG "Image of Tcx Fixer GUI App")
+![alt text](https://github.com/auxcodes/tcx-fixer/blob/master/ReadmeImages/TcxFixerGui.PNG "Image of Tcx Fixer GUI App")
 
 ## TcxFixerConsole
 
