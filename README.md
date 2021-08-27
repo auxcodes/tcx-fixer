@@ -4,13 +4,13 @@ C# projects for fixing TCX files exported from Strava.
 
 ## Problem They Solve
 
-Bulk downloaded tcx files from Strava have leading spaces at the begining of the file, which Garmin Connect deams as invalid XML with the following error message.
+Bulk downloaded tcx files from Strava have leading spaces at the beginning of the file, which Garmin Connect deems as invalid XML with the following error message.
 
 *"One of your files was not accepted by the system. Please contact Support for Assistance"*
 
 ![alt text](https://github.com/auxcodes/tcx-fixer/blob/master/ReadmeImages/GarminUploadError.png "Image of upload error")
 
-Upon noticing that my Garmin Connect activty history was missing activities that existed in Strava I decided to download the missing activities from Strava.
+Upon noticing that my Garmin Connect activity history was missing activities that existed in Strava I decided to download the missing activities from Strava.
 Downloading activities individually was tedious, so I downloaded all my data.
 
 However, whilst the individually downloaded files uploaded fine to Garmin Connect, the bulk download of activities did not, after some upload tests (To many at once? Already uploaded? Fit, gpx or tcx files?) I finally narrowed it down to the tcx files and compared them to the individually downloaded files.
