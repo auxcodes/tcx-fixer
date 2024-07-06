@@ -1,6 +1,6 @@
 [![Support me on ko-fi](https://pabanks.io/assets/kofi-md.svg)](https://ko-fi.com/H2H1ZZY1Q) &nbsp; [![Support me on Coindrop](https://pabanks.io/assets/coindrop-md.svg)](https://coindrop.to/auxcodes)
 
-# Strave TCX File Fixer
+# Strava TCX File Fixer
 
 C# projects for fixing TCX files exported from Strava.
 
